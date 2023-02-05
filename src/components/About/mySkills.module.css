@@ -1,0 +1,19 @@
+.skill-logo {
+  width: 100px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 20px;
+  transition-duration: 0.2s;
+}
+
+.skill-logo:hover {
+  transform: scale(1.5);
+}
+
+.skill-logo-cont {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
