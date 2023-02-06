@@ -2,8 +2,8 @@ import React from 'react'
 
 const details = {
   name: 'Pulkit Bajaj',
-  resumeDownload:
-    'https://drive.google.com/u/2/uc?id=18Ff9K2oaRTOcPU8fEjMHSJhWseMblj-J&export=download',
+  resume:
+    'https://drive.google.com/file/d/1zhKcygsopiKbfWyXYvhKi5QG_vTUoEPE/view?usp=sharing',
   linkedIn: 'https://www.linkedin.com/in/pulkitbajaj/',
   github: 'https://github.com/pulkitbajaj1999',
 }
@@ -27,11 +27,7 @@ const Header = () => {
             websites.
           </p>
           <div className="btn-con">
-            <a
-              href={details.resumeDownload}
-              target="_blank"
-              className="main-btn"
-            >
+            <a href={details.resume} target="_blank" className="main-btn">
               <span className="btn-text">Resume</span>
               <span className="btn-icon">
                 <i className="fas fa-download"></i>
