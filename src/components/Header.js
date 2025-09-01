@@ -3,7 +3,7 @@ import React from 'react'
 const details = {
   name: 'Pulkit Bajaj',
   resume:
-    'https://drive.google.com/file/d/1zhKcygsopiKbfWyXYvhKi5QG_vTUoEPE/view?usp=sharing',
+    'https://drive.google.com/file/d/1yz36Oo5LgymAaEnbmLXmZb3lIoX5_Bcd/view?usp=sharing',
   linkedIn: 'https://www.linkedin.com/in/pulkitbajaj/',
   github: 'https://github.com/pulkitbajaj1999',
 }
@@ -23,8 +23,10 @@ const Header = () => {
             Hi, I'm <span>{details.name}.</span>
           </h1>
           <p>
-            I'm a Web Developer, I love to create beautiful and functional
-            websites.
+            I’m a passionate Full-Stack Developer with over 4 years of professional experience 
+            building scalable and performant web applications. I specialize in working with 
+            technologies like React, Node.js, Express, MongoDB, and Kubernetes, and have 
+            hands-on experience in both frontend and backend development across microservices-based architectures.
           </p>
           <div className="btn-con">
             <a href={details.resume} target="_blank" className="main-btn">
@@ -37,10 +39,10 @@ const Header = () => {
 
           <div className="contact-content-con">
             <div className="contact-icon">
-              <a href={details.linkedIn} target="_blank">
+              <a className="icon-box" href={details.linkedIn} target="_blank">
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href={details.github} target="_blank">
+              <a className="icon-box" href={details.github} target="_blank">
                 <i className="fab fa-github"></i>
               </a>
             </div>

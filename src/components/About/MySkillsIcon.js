@@ -7,16 +7,22 @@ const MySkills = ({ skills }) => {
       <h4 className="stat-title">Skills</h4>
       <div className={styles['skill-logo-cont']}>
         {skills.map((skill, i) => (
-          <a rel="skill-logo" key={i}>
+          <a
+            key={i}
+            rel="skill-logo"
+            className={styles['skill-logo-wrapper']}
+          >
             <img
               rel="skill-logo"
               className={styles['skill-logo']}
               src={skill.logo}
               alt={skill.name}
             />
+            <span className={styles.tooltip}>{skill.name}</span>
           </a>
         ))}
       </div>
+
     </div>
   )
 }

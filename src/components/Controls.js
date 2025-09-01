@@ -1,55 +1,86 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 const Controls = () => {
-  const scrollHandler = (e) => {
-    e.preventDefault()
-    const section = document.getElementById(e.target.getAttribute('data-id'))
-    const sectionPos = section.offsetTop
-    window.scroll({
-      top: sectionPos,
-      behavior: 'smooth',
-    })
-  }
+  const [activeSection, setActiveSection] = useState('home')
+
   useEffect(() => {
-    const tolerance = 5 // setting tolerance to 5px
-    const menuItems = document.querySelectorAll('.control')
-    window.addEventListener('scroll', function () {
-      const scrollPos = window.scrollY
-      menuItems.forEach((menuItem) => {
-        const section = document.getElementById(
-          menuItem.getAttribute('data-id')
-        )
-        const sectionPos = section.offsetTop
-        const sectionHeight = section.offsetHeight
-        if (
-          scrollPos >= sectionPos - tolerance &&
-          scrollPos < sectionPos + sectionHeight - tolerance
-        ) {
-          menuItem.classList.add('active-btn')
-        } else {
-          menuItem.classList.remove('active-btn')
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const pageHeight = document.documentElement.scrollHeight;
+
+      if (scrollPosition >= pageHeight - 10) {
+        // At or near bottom of the page
+        setActiveSection('contact'); // 👈 change this to your last section's ID
+        return
+      }
+
+      const sections = ['home', 'about', 'blogs', 'contact'];
+
+      for (let i = 0; i < sections.length; i++) {
+        const section = document.getElementById(sections[i]);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          const offsetTop = rect.top + window.scrollY;
+          const offsetBottom = offsetTop + section.offsetHeight;
+  
+          if (
+            window.scrollY >= offsetTop - 100 &&
+            window.scrollY < offsetBottom - 100
+          ) {
+            setActiveSection(sections[i]);
+            break;
+          }
         }
-      })
-    })
-  }, [])
+      }
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+  const scrollHandler = (e) => {
+    const id = e.currentTarget.dataset.id;
+    setActiveSection(id);
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
+
   return (
     <div className="controls">
       <div
-        className="control active-btn"
+        className={`control ${activeSection === 'home' ? 'active-btn' : ''}`}
         onClick={scrollHandler}
         data-id="home"
       >
         <i className="fas fa-home"></i>
       </div>
-      <div className="control" data-id="about" onClick={scrollHandler}>
+      <div
+        className={`control ${activeSection === 'about' ? 'active-btn' : ''}`}
+        onClick={scrollHandler}
+        data-id="about"
+      >
         <i className="fas fa-user"></i>
       </div>
-      <div className="control" data-id="blogs" onClick={scrollHandler}>
+      <div
+        className={`control ${activeSection === 'blogs' ? 'active-btn' : ''}`}
+        onClick={scrollHandler}
+        data-id="blogs"
+      >
         <i className="fas fa-briefcase"></i>
       </div>
-      <div className="control" data-id="contact" onClick={scrollHandler}>
+      <div
+        className={`control ${activeSection === 'contact' ? 'active-btn' : ''}`}
+        onClick={scrollHandler}
+        data-id="contact"
+      >
         <i className="fas fa-envelope-open"></i>
       </div>
     </div>
+
   )
 }
 

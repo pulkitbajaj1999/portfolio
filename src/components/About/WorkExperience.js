@@ -1,44 +1,64 @@
 import React from 'react'
+
 const WorkExperience = () => {
   return (
     <>
       <h4 className="stat-title">Work Experience</h4>
       <div className="timeline">
+        {/* MRO Corp */}
         <div className="timeline-item">
           <div className="tl-icon">
             <i className="fas fa-briefcase"></i>
           </div>
-          <p className="tl-duration">July 2021 - present</p>
+          <p className="tl-duration">August 2023 - Present</p>
+          <h5>
+            Fullstack Developer<span> - MRO Corp</span>
+          </h5>
+          <ul>
+            <li>
+              <strong>Healthcare Web Applications: </strong> Developed and maintained scalable web applications using React, Node.js, Express, Cassandra, BigQuery, Postgres, and MongoDB within a microservices architecture.
+            </li>
+            <li>
+              <strong>Agile Development: </strong> Delivered features in Agile sprints with high quality—performing code reviews, writing unit tests, and managing vulnerabilities.
+            </li>
+            <li>
+              <strong>Team Collaboration: </strong> Collaborated with an 8–9 person team, contributed to POCs, and mentored junior developers.
+            </li>
+            <li>
+              <strong>Performance Optimization: </strong> Optimized application performance by up to 70%, ensuring scalability to handle large data volumes and user base.
+            </li>
+            <li>
+              <strong>Production Support: </strong> Handled production issues with minimal downtime using GCP logging and Kubernetes.
+            </li>
+          </ul>
+        </div>
+
+        {/* Incedo - Full Time */}
+        <div className="timeline-item">
+          <div className="tl-icon">
+            <i className="fas fa-briefcase"></i>
+          </div>
+          <p className="tl-duration">July 2021 - August 2023</p>
           <h5>
             Software Engineer<span> - Incedo</span>
           </h5>
           <ul>
             <li>
-              <strong>Incedo Cricket League: </strong>It is a website which is
-              used to manage auction of different teams in real time and
-              provides overview of players, teams, accounts. Backend is written
-              with node and frontend uses React. MongoDb is used for database.
-              It uses socket.io for real time bidding process.
+              <strong>Incedo Cricket League: </strong> Developed a web app for real-time cricket auctions using React, Node, Express, and MongoDB. Implemented real-time bidding using Socket.io.
             </li>
             <li>
-              <strong>Tripwire Connect: </strong>Tripwire Connect is a splunk
-              based product which is used in analysis and is available as
-              onpremise as well as saas. I worked with technologies like
-              javascript, html, css for onprem side and React for saas side.
+              <strong>SAAS Applications: </strong> Worked on React and Splunk-based SAAS applications, using JavaScript, Django, Python, and Docker for backend and on-premise environments.
             </li>
             <li>
-              <strong>Developed Export-to-pdf: </strong>Requirement was to
-              create a common library to parse different types of connect
-              reports and export to a pdf. Successfully delivered the epic
-              meeting all the requirements and within the given time.
+              <strong>Export-to-PDF Library: </strong> Built a reusable JavaScript PDF export library for Splunk-based security reports, improving report generation and client engagement.
             </li>
-
             <li>
-              <strong>MAD Award: </strong>Received Made A Difference Difference
-              award for my contribution in solving client requirements
+              <strong>MAD Award: </strong> Received "Made A Difference" award for high-impact contributions in a short time span.
             </li>
           </ul>
         </div>
+
+        {/* Incedo - Internship */}
         <div className="timeline-item">
           <div className="tl-icon">
             <i className="fas fa-briefcase"></i>
@@ -49,11 +69,10 @@ const WorkExperience = () => {
           </h5>
           <ul>
             <li>
-              <strong>Incedo Recruitment Portal: </strong> It is a webapp which
-              manages the recruitment process easily and effectively. It
-              supports management of job description and requisition IDs,
-              candidates, interview rounds, resume parsing. It uses
-              python-django as backend and fronend uses django-templating.
+              <strong>Incedo Recruitment Portal: </strong> Built a recruitment platform using Python-Django and vanilla JavaScript with SQLite, enabling efficient job management and resume parsing.
+            </li>
+            <li>
+              <strong>DevOps Support: </strong> Assisted in maintaining virtual servers (Windows Server, CentOS, Debian) using Linux scripting and GitHub for code reviews.
             </li>
           </ul>
         </div>

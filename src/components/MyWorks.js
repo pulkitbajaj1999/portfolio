@@ -1,12 +1,30 @@
 import React from 'react'
 
 const projects = [
+
+  {
+    title: 'Incedo Cricket League Portal',
+    info: 'Incedo Cricket League (ICL) is a website to manage real-time auction of different cricket teams and provides overview of teams, players, accounts.',
+    github: 'https://github.com/pulkitbajaj1999/icl',
+    server: 'http://www.incedocricketleague.in/',
+    imgSrc: 'img/projects/icl.png',
+    targetUrl: 'https://github.com/pulkitbajaj1999/icl',
+  },
   {
     title: 'Musicwire',
     info: 'Musicwire is a music webapp built on MERN stack, on which you can enjoy listening your favorite songs, create your playlist and add songs to them.',
     github: 'https://github.com/pulkitbajaj1999/musicwire',
     server: 'https://musicwire.up.railway.app/',
     imgSrc: 'img/projects/musicwire.png',
+    targetUrl: 'https://musicwire.onrender.com/',
+  },
+  {
+    title: 'WizElectron',
+    info: 'A desktop application built on top of electron-vite and react to control the philips wiz light from your wifi network.',
+    github: 'https://github.com/pulkitbajaj1999/wiz-electron',
+    server: '',
+    imgSrc: 'img/projects/wiz-electron.png',
+    targetUrl: 'https://github.com/pulkitbajaj1999/wiz-electron',
   },
   {
     title: 'Chess19',
@@ -14,6 +32,7 @@ const projects = [
     github: 'https://github.com/pulkitbajaj1999/chess19',
     server: 'https://chess19.up.railway.app/',
     imgSrc: 'img/projects/chess19.png',
+    targetUrl: 'https://chess19.netlify.app/',
   },
   {
     title: 'WheelsOnRent',
@@ -21,6 +40,7 @@ const projects = [
     github: 'https://github.com/pulkitbajaj1999/wheels-on-rent',
     server: 'https://wheels-on-rent.up.railway.app/',
     imgSrc: 'img/projects/wheels-on-rent.png',
+    targetUrl: 'https://github.com/pulkitbajaj1999/wheels-on-rent',
   },
   {
     title: 'Localkart',
@@ -28,6 +48,7 @@ const projects = [
     github: 'https://github.com/pulkitbajaj1999/localkart',
     server: 'https://localkart.up.railway.app/',
     imgSrc: 'img/projects/localkart.png',
+    targetUrl: 'https://github.com/pulkitbajaj1999/localkart',
   },
   {
     title: 'Boltshare',
@@ -35,6 +56,7 @@ const projects = [
     github: 'https://github.com/pulkitbajaj1999/boltshare',
     server: 'https://boltshare.up.railway.app/',
     imgSrc: 'img/projects/boltshare.png',
+    targetUrl: 'https://github.com/pulkitbajaj1999/boltshare',
   },
   {
     title: 'Task Manager',
@@ -42,13 +64,7 @@ const projects = [
     github: 'https://github.com/pulkitbajaj1999/task-manager',
     server: 'https://task-manager19.up.railway.app/',
     imgSrc: 'img/projects/task-manager.png',
-  },
-  {
-    title: 'Incedo Cricket League Portal',
-    info: 'Incedo Cricket League (ICL) is a website to manage real-time auction of different cricket teams and provides overview of teams, players, accounts.',
-    github: 'https://github.com/pulkitbajaj1999/icl',
-    server: 'http://www.incedocricketleague.in/',
-    imgSrc: 'img/projects/icl.png',
+    targetUrl: 'https://taskmanager19.netlify.app/',
   },
 ]
 const MyWorks = () => {
@@ -64,7 +80,7 @@ const MyWorks = () => {
         <div className="blogs">
           {projects.map((project, i) => (
             <div className="blog" key={i}>
-              <a href={project.server} target="_blank">
+              <a href={project.targetUrl} target="_blank">
                 <img src={project.imgSrc} alt="" />
               </a>
               <div className="blog-text">

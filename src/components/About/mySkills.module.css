@@ -1,4 +1,4 @@
-.skill-logo {
+/* .skill-logo {
   width: 100px;
   display: inline-block;
   cursor: pointer;
@@ -16,4 +16,71 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+} */
+
+/* skill.module.css (or whatever your CSS module file is called) */
+/* skill.module.css */
+
+.skill-logo-cont {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-logo-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+.skill-logo {
+  width: 100px;
+  display: inline-block;
+  transition-duration: 0.2s;
+  transition-property: transform;
+}
+
+.skill-logo-wrapper:hover .skill-logo {
+  transform: scale(1.5);
+}
+
+.tooltip {
+  visibility: visible;
+  opacity: 0;
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 8px;
+  position: absolute;
+  z-index: 10;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 0; /* place the arrow at the top of the tooltip */
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%); /* shift it above the tooltip */
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+  /* Explanation:
+    border-color: top right bottom left;
+    We want bottom side colored (pointing up), others transparent */
+}
+
+
+.skill-logo-wrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
