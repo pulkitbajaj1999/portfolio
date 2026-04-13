@@ -5,7 +5,7 @@ const details = {
   resume:
     'https://drive.google.com/file/d/1yz36Oo5LgymAaEnbmLXmZb3lIoX5_Bcd/view?usp=sharing',
   linkedIn: 'https://www.linkedin.com/in/pulkitbajaj/',
-  github: 'https://github.com/pulkitbajaj1999',
+  github: 'https://github.com/pulkitbajaj1999/',
 }
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
             Hi, I'm <span>{details.name}.</span>
           </h1>
           <p>
-            I’m a passionate Full-Stack Developer with over 4 years of professional experience 
+            I’m a passionate Full-Stack Developer with over 5+ years of professional experience 
             building scalable and performant web applications. I specialize in working with 
             technologies like React, Node.js, Express, MongoDB, and Kubernetes, and have 
             hands-on experience in both frontend and backend development across microservices-based architectures.

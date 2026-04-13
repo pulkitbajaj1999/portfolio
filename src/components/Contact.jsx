@@ -6,7 +6,7 @@ const details = {
   mobile: '9079940527',
   languages: 'English, Hindi',
   linkedIn: 'https://www.linkedin.com/in/pulkitbajaj/',
-  github: 'https://github.com/pulkitbajaj1999',
+  github: 'https://github.com/pulkitbajaj1999/',
 }
 
 const Contact = () => {
