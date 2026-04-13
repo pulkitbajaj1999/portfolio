@@ -16,6 +16,13 @@ const projects = [
     targetUrl: 'https://breeze19.netlify.app/',
   },
   {
+    title: 'Docker-Scram',
+    info: 'Track docker tags for different docker hub repositories',
+    github: 'https://github.com/pulkitbajaj1999/docker-scram/',
+    imgSrc: 'img/projects/docker-scram.png',
+    targetUrl: 'https://pulkitbajaj.up.railway.app/docker-scram/',
+  },
+  {
     title: 'Musicwire',
     info: 'Musicwire is a music webapp built on MERN stack, on which you can enjoy listening your favorite songs, create your playlist and add songs to them.',
     github: 'https://github.com/pulkitbajaj1999/musicwire',
@@ -58,6 +65,14 @@ const projects = [
     imgSrc: 'img/projects/task-manager.png',
     targetUrl: 'https://taskmanager19.netlify.app/',
   },
+  {
+    title: 'Localkart',
+    info: 'Ecommerce website on which sellers can list their products and buyers can view and order. It uses Node-Express as backend framework,  ejs templating engine and MongoDB for database.',
+    github: 'https://github.com/pulkitbajaj1999/localkart',
+    server: 'https://localkart.up.railway.app/',
+    imgSrc: 'img/projects/localkart.png',
+    targetUrl: 'https://github.com/pulkitbajaj1999/localkart',
+  }
 ]
 const MyWorks = () => {
   return (
