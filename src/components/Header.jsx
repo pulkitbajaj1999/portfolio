@@ -3,7 +3,7 @@ import React from 'react'
 const details = {
   name: 'Pulkit Bajaj',
   resume:
-    'https://drive.google.com/file/d/1yz36Oo5LgymAaEnbmLXmZb3lIoX5_Bcd/view?usp=sharing',
+    'https://drive.google.com/file/d/1te3v2zFhCPp69c3X8w4O92g-T3u-MoSS/view',
   linkedIn: 'https://www.linkedin.com/in/pulkitbajaj/',
   github: 'https://github.com/pulkitbajaj1999/',
 }
@@ -23,10 +23,11 @@ const Header = () => {
             Hi, I'm <span>{details.name}.</span>
           </h1>
           <p>
-            I’m a passionate Full-Stack Developer with over 5+ years of professional experience 
-            building scalable and performant web applications. I specialize in working with 
-            technologies like React, Node.js, Express, MongoDB, and Kubernetes, and have 
-            hands-on experience in both frontend and backend development across microservices-based architectures.
+            Full-Stack Software Engineer with 5+ years of experience specializing in scalable Microservices Architecture and Healthcare SaaS.
+            Engineered high-availability systems sustaining 99.9% uptime for 10k+ concurrent providers and 1M+ clinical records, leveraging Node.js, React, Kubernetes, GCP, and large-scale NoSQL databases.<br/>
+            Obsessed with performance — delivered 80% system-wide gains through strategic frontend modernization, database indexing, distributed tracing, and elimination of legacy bottlenecks. Proven expertise in Pub/Sub event-driven architecture, GraphQL, RESTful APIs, and automated data onboarding at scale.<br/>
+            Passionate about leveraging AI-driven solutions to accelerate development workflows, enhance system intelligence, and deliver smarter, future-ready engineering outcomes.<br/>
+            Award-winning engineer recognized for Cybersecurity innovation and consistent technical excellence in high-pressure production environments.
           </p>
           <div className="btn-con">
             <a href={details.resume} target="_blank" className="main-btn">
